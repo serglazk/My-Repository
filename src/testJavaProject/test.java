@@ -1,5 +1,5 @@
 package testJavaProject;
 
 public class test {
-/* cc 3 */
+/* cc 5 */
 }
