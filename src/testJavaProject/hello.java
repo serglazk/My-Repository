@@ -4,7 +4,7 @@ public class hello {
 	/**
 	 * @param args
 	 *  
-	 * 2-nd update
+	 * 3 update
 	 * 
 	 */
 	public static void main(String[] args) {
