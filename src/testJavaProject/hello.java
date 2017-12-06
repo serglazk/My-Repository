@@ -3,7 +3,7 @@ package testJavaProject;
 public class hello {
 	/**
 	 * @param args
-	 * 
+	 *  
 	 * 2-nd update
 	 * 
 	 */
