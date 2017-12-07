@@ -17,15 +17,15 @@
 	<target name="jar" depends="compile">
 		<mkdir dir="build/jar" />
 		-
-		<jar basedir="build/classes" destfile="build/jar/helloworld.jar">
+		<jar basedir="build/classes" destfile="build/jar/hello.jar">
 			-
 			<manifest>
-				<attribute name="Main-Class" value="data.helloworld" />
+				<attribute name="Main-Class" value="data.hello" />
 			</manifest>
 		</jar>
 	</target>
 	-
 	<target name="run" depends="jar">
-		<java fork="true" jar="build/jar/helloworld.jar" />
+		<java fork="true" jar="build/jar/hello.jar" />
 	</target>
 </project>
