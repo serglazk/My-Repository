@@ -1,4 +1,2 @@
 language: java
 script: ant build
-deploy:
-  skip_cleanup: true
