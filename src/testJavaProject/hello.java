@@ -1,7 +1,7 @@
 package testJavaProject;
 
 public class hello {
-	/**
+	/*
 	 * @param args
 	 */
 	public static void main(String[] args) {
