@@ -1,3 +1,4 @@
+services: docker
 language: java
 script: ant build
-services: docker
+
