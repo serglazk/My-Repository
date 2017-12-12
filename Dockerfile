@@ -1,2 +1,2 @@
 FROM java:8
-CMD  /src/hello
+CMD  /src/testJavaProject/hello
