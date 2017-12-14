@@ -4,10 +4,9 @@ services:
 language: java
 script: ant build
 
+after_success:
 travis env set DOCKER_USERNAME serglazk
 travis env set DOCKER_PASSWORD zaq12wsx
-
-after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
     docker push USER/REPO;
