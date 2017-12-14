@@ -1,10 +1,11 @@
-travis env set DOCKER_USERNAME serglazk
-travis env set DOCKER_PASSWORD zaq12wsx
-
 services: 
  - docker
+ 
 language: java
 script: ant build
+
+travis env set DOCKER_USERNAME serglazk
+travis env set DOCKER_PASSWORD zaq12wsx
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
