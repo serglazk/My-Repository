@@ -6,8 +6,6 @@ script: ant build
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    env set DOCKER_USERNAME serglazk;
-    env set DOCKER_PASSWORD zaq12wsx;
-    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker login -u "serglazk" -p "zaq12wsx";
     docker push USER/REPO;
     fi
