@@ -2,7 +2,7 @@ services:
  - docker
  
 language: java
-script: ant build
+script: ant run
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
