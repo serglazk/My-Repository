@@ -5,5 +5,5 @@
 FROM alpine:latest
 #ADD hello.class hello.class
 RUN apk --update add openjdk8-jre
-COPY hello.jar app.jar
+COPY /build/jar/hello.jar app.jar
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "HelloWorld"]
