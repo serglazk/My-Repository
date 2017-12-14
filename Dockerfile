@@ -3,6 +3,7 @@
 #ADD hello* serglazk/my_repository
 #CMD /bin/testJavaProject/hello
 FROM alpine:latest
-ADD hello.class hello.class
+#ADD hello.class hello.class
 RUN apk --update add openjdk8-jre
+COPY hello.jar app.jar
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "HelloWorld"]
