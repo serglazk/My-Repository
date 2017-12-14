@@ -7,6 +7,6 @@ script: ant build
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u "serglazk" -p "zaq12wsx";
-    docker build -f Dockerfile -t test/commit .;
+    docker build -f Dockerfile .;
     docker push serglazk/my_repository;
     fi
