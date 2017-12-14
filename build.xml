@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--  --><project default="run">
-	- <target name="clean">
+	<target name="clean">
 		<delete dir="build" />
 	</target>
-	- <target name="compile" depends="clean">
+	<target name="compile" depends="clean">
 		<mkdir dir="build/classes" />
-		-
-		<javac destdir="build/classes" srcdir="src"
+			<javac destdir="build/classes" srcdir="src"
 			sourcepath="D:\работа\own\eclipse\Travis">
 			<include name="**/*.java" />
 		</javac>
 	</target>
-	- <target name="jar" depends="compile">
+	<target name="jar" depends="compile">
 		<mkdir dir="build/jar" />
-		-
-		<jar basedir="build/classes" destfile="build/jar/hello.jar">
-			-
-			<manifest>
+			<jar basedir="build/classes" destfile="build/jar/hello.jar">
+				<manifest>
 				<attribute name="Main-Class" value="data.hello" />
 			</manifest>
 		</jar>
 	</target>
-	- <target name="run" depends="jar">
+	<target name="run" depends="jar">
 		<java fork="true" jar="build/jar/hello.jar" />
 	</target>
 </project>
