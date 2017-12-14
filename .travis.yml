@@ -8,5 +8,5 @@ after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u "serglazk" -p "zaq12wsx";
     docker build -f Dockerfile -t $REPO:$COMMIT .;
-    docker push USER/REPO;
+    docker push serglazk/my_repository;
     fi
