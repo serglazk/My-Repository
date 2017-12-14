@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--  --><project default="run">
-	-
-	<target name="clean">
+	- <target name="clean">
 		<delete dir="build" />
 	</target>
-	-
-	<target name="compile" depends="clean">
+	- <target name="compile" depends="clean">
 		<mkdir dir="build/classes" />
 		-
 		<javac destdir="build/classes" srcdir="src"
@@ -13,8 +11,7 @@
 			<include name="**/*.java" />
 		</javac>
 	</target>
-	-
-	<target name="jar" depends="compile">
+	- <target name="jar" depends="compile">
 		<mkdir dir="build/jar" />
 		-
 		<jar basedir="build/classes" destfile="build/jar/hello.jar">
@@ -24,8 +21,7 @@
 			</manifest>
 		</jar>
 	</target>
-	-
-	<target name="run" depends="jar">
+	- <target name="run" depends="jar">
 		<java fork="true" jar="build/jar/hello.jar" />
 	</target>
 </project>
