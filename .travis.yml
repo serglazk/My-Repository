@@ -3,7 +3,6 @@ services:
  
 language: java
 script: ant run
-skip_cleanup: true
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
@@ -11,3 +10,11 @@ after_success:
     docker build -f Dockerfile -t serglazk/my_repository .;
     docker push serglazk/my_repository;
     fi
+
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: "FILE TO UPLOAD"
+  skip_cleanup: true
+  on:
+    tags: true
