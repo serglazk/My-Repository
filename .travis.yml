@@ -11,6 +11,12 @@ after_success:
     docker push serglazk/my_repository;
     fi
 
+before_deploy:
+# Set up git user name and tag this commit
+  - git config --local user.name "serglazk"
+#  - git config --local user.email "YOUR GIT USER EMAIL"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+
 deploy:
   provider: releases
   api_key: "GITHUB OAUTH TOKEN"
