@@ -3,6 +3,7 @@ services:
  
 language: java
 script: ant run
+skip_cleanup: true
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
