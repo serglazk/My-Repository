@@ -5,9 +5,11 @@ language: java
 script: ant run
 
 after_success:
-  skip_cleanup: true
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u "serglazk" -p "zaq12wsx";
     docker build -f Dockerfile -t serglazk/my_repository .;
     docker push serglazk/my_repository;
     fi
+    
+deploy:
+  skip_cleanup: true
