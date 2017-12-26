@@ -14,7 +14,7 @@
 		<mkdir dir="build/jar" />
 			<jar basedir="build/classes" destfile="build/jar/hello.jar">
 				<manifest>
-				<attribute name="Main-Class" value="hello" />
+				<attribute name="Main-Class" value="testJavaProject.hello" />
 			</manifest>
 		</jar>
 	</target>
